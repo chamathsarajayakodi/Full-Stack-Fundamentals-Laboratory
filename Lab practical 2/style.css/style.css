@@ -1,0 +1,261 @@
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: black;
+}
+
+/* Header Styles */
+header {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 27px 0 17px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 4px solid orange;
+}
+
+.logo {
+    text-decoration: none;
+    color: white;
+    font-family: Georgia, serif;
+    font-size: 26px;
+}
+
+nav {
+    display: flex;
+    gap: 52px;
+    margin-right: 105px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+nav a:hover,
+nav .active {
+    color: orange;
+}
+
+/* Main Styles */
+main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 44px auto 0;
+}
+
+/* Home Banner */
+.banner {
+    width: 100%;
+    height: 316px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Introduction */
+.intro {
+    padding: 25px 0 44px;
+}
+
+.intro h1 {
+    font-family: Georgia, serif;
+    font-size: 46px;
+    line-height: 1.2;
+    margin: 0 0 17px;
+    color: white;
+}
+
+.subtitle {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: white;
+    margin: 0 0 22px;
+}
+
+.intro p:not(.subtitle) {
+    max-width: 720px;
+    line-height: 1.8;
+    font-size: 17px;
+    color: white;
+    margin: 20px 0;
+}
+
+/* Buttons */
+.button {
+    display: inline-block;
+    margin-top: 0;
+    padding: 11px 17px;
+    border: 2px solid orange;
+    border-radius: 4px;
+    color: orange;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.button:hover {
+    background-color: orange;
+    color: white;
+}
+
+/* What We Do */
+#features {
+    border-top: 2px solid #eeeeee;
+    padding-top: 31px;
+}
+
+#features > h2 {
+    font-family: Georgia, serif;
+    font-size: 29px;
+    margin: 0 0 10px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+#features > h2::after {
+    content: "";
+    display: block;
+    width: 190px;
+    height: 3px;
+    background-color: orange;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Features */
+.features {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 58px;
+    margin-top: 45px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.icon {
+    color: orange;
+    font-size: 40px;
+    min-width: 68px;
+    text-align: center;
+    margin-top: 6px;
+}
+
+.feature h3 {
+    font-family: Georgia, serif;
+    font-size: 23px;
+    margin: 0 0 12px;
+}
+
+.feature p {
+    color: white;
+    line-height: 1.65;
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Footer */
+footer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 74px auto 20px;
+    color: #818c96;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* Responsive Layout */
+@media (max-width: 1250px) {
+    header {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+@media (max-width: 700px) {
+    header {
+        flex-wrap: wrap;
+        gap: 18px;
+    }
+
+    nav {
+        gap: 22px;
+        margin-right: 0;
+    }
+
+    main {
+        width: 90%;
+        margin-top: 25px;
+    }
+
+    .banner {
+        height: 220px;
+    }
+
+    .intro h1 {
+        font-size: 34px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+        row-gap: 35px;
+    }
+
+    .feature {
+        gap: 15px;
+    }
+
+    .icon {
+        min-width: 48px;
+    }
+}
+
+/* Additional Styles for Projects Page */
+.section-title {
+    border-bottom: 4px solid orange;
+    padding-bottom: 10px;
+    width: fit-content;
+}
+
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.projects article {
+    display: flex;
+    flex-direction: column;
+}
+
+.projects article img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    display: block;
+}
+
+.projects article p {
+    flex-grow: 1;
+}
+
+.projects article .button {
+    align-self: flex-start;
+    margin-top: 10px;
+}
