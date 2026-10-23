@@ -6,7 +6,8 @@
     <title>LMS | Home</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
-<body class="bg-black text-white">
+<body>
+    
     <header>
         <nav class="navbar navbar-expand navbar-dark bg-primary px-4">
             <a class="navbar-brand fw-bold" href="index.html">LMS</a>
@@ -16,12 +17,22 @@
                 <a class="nav-link" href="projects.html">Courses</a>
                 <a class="nav-link" href="about.html">About</a>
                 <a class="nav-link" href="contact.html">Contact</a>
+
+                <button class="btn btn-outline-light ms-3"
+                        id="darkModeToggle"
+                        type="button">
+                    Dark Mode
+                </button>
             </div>
         </nav>
     </header>
+
     <main class="container-fluid px-0">
         <section class="container py-5 text-center">
-            <h1>Welcome to the LMS Platform</h1>
+            <h1>
+                <span id="greeting" class="d-block"></span>
+                Welcome to the LMS Platform
+            </h1>
             <p class="subtitle">Unlock Your Potential. Learn Without Limits.</p>
             <p>Your journey to knowledge starts here. Explore courses, build new skills, and turn your ambitions into achievements.</p>
             <a class="btn btn-primary" href="#Popular-Courses">Get Started</a>
@@ -110,5 +121,6 @@
             <a href="#" class="text-white">Terms of Use</a>
         </p>
     </footer>
+<script src="script.js"></script>
 </body>
 </html>
